@@ -1,9 +1,0 @@
-{
-  "version": 2,
-  "name": "rushikesh-portfolio",
-  "public": true,
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/$1" }
-  ]
-}
