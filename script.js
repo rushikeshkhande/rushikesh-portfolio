@@ -12,26 +12,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
 
     // Check saved preference or default to dark
-    const savedTheme = localStorage.getItem('rk_theme') || 'dark';
-    if (savedTheme === 'light') {
-        body.classList.remove('dark-theme');
-        body.classList.add('light-theme');
-    } else {
+    const savedTheme = localStorage.getItem('rk_theme') || 'light';
+
+if (savedTheme === 'dark') {
+    body.classList.remove('light-theme');
+    body.classList.add('dark-theme');
+} else {
+    body.classList.remove('dark-theme');
+    body.classList.add('light-theme');
+}
+
+themeToggleBtn.addEventListener('click', () => {
+    if (body.classList.contains('light-theme')) {
         body.classList.remove('light-theme');
         body.classList.add('dark-theme');
+        localStorage.setItem('rk_theme', 'dark');
+    } else {
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
+        localStorage.setItem('rk_theme', 'light');
     }
-
-    themeToggleBtn.addEventListener('click', () => {
-        if (body.classList.contains('dark-theme')) {
-            body.classList.remove('dark-theme');
-            body.classList.add('light-theme');
-            localStorage.setItem('rk_theme', 'light');
-        } else {
-            body.classList.remove('light-theme');
-            body.classList.add('dark-theme');
-            localStorage.setItem('rk_theme', 'dark');
-        }
-    });
+});
 
     // ----------------------------------------------------------------------
     // 2. NAVBAR SCROLL EFFECT & MOBILE MENU
