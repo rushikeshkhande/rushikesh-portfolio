@@ -983,10 +983,11 @@ img {
 
 /* Analytics Performance Proof */
 .analytics-showcase {
-    background: #ffffff;
+    background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     padding: 24px;
+    transition: .3s;
 }
 
 .analytics-header {
@@ -1067,7 +1068,8 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 10px 14px;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
     border-radius: var(--radius-sm);
     font-size: 0.88rem;
 }
@@ -1425,11 +1427,12 @@ img {
     color: var(--text-secondary);
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.form-group input, .form-group textarea, .form-group select {
     width: 100%;
     padding: 14px 18px;
-    background: rgba(0, 0, 0, 0.35);
-    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border:1px solid var(--border-color);
     border-radius: var(--radius-md);
     color: var(--text-primary);
     font-family: var(--font-body);
